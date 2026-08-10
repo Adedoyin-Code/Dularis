@@ -3,63 +3,134 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="img/74b4be6e-0963-435f-b5a4-6c0ee50a71f8.png"
+      type="image/x-icon"
+    />
     <title>About Us | Dularis</title>
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="style.css">
-    
   </head>
   <body>
     <!-- NAVBAR -->
     <nav class="navbar">
-      <div class="logo">Dul<span>aris</span></div>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="index.html">Home</a></li>
-        <li class="nav-dropdown">
-          <button class="nav-dropdown-trigger" id="aboutDropdownTrigger">
-            About
-            <svg class="dropdown-caret" width="12" height="12" viewBox="0 0 16 16" fill="none">
-              <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <div class="nav-dropdown-panel" id="aboutDropdownPanel">
-            <a href="about.html" class="dropdown-link">Our Story</a>
-            <div class="dropdown-divider"></div>
-            <a href="team.html" class="dropdown-link">Our Team</a>
-          </div>
-        </li>
-        <li><a href="index.html#services">Services</a></li>
-        <li><a href="index.html#packages">Packages</a></li>
-        <li><a href="index.html#portfolio">Portfolio</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
-      <a href="index.html#contact" class="nav-cta">Get In Touch</a>
+      <div class="logo">
+        <img src="img/dularis-logo.png" alt="Dularis" class="logo-img" />
+      </div>
+
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
+
+      <div class="mobile-nav-overlay" id="navLinks">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown-trigger" id="aboutDropdownTrigger">
+              About
+              <svg
+                class="dropdown-caret"
+                width="12"
+                height="12"
+                viewBox="0 0 16 16"
+                fill="none"
+              >
+                <path
+                  d="M4 6L8 10L12 6"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+            <div class="nav-dropdown-panel" id="aboutDropdownPanel">
+              <a href="about.html" class="dropdown-link">Your Story</a>
+              <a href="team.html" class="dropdown-link">Your Team</a>
+            </div>
+          </li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#packages">Packages</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <a href="index.html#contact" class="nav-cta-mobile-link"
+          >Get In Touch</a
+        >
+      </div>
+
+      <a href="index.html#contact" class="nav-cta">Get In Touch</a>
     </nav>
 
-    <!-- PAGE HEADER -->
-    <section class="page-header">
-      <p class="showcase-label">About Dularis</p>
-      <h1>A Growth And Brand Agency Built For Serious Business</h1>
-      <p class="page-header-sub">We handle your website, marketing, and brand materials as one connected system, not three separate projects.</p>
+    <!-- ABOUT HERO -->
+    <section class="about-hero">
+      <div class="about-hero-bg" aria-hidden="true">
+        <div class="ah-orb ah-orb-1"></div>
+        <div class="ah-orb ah-orb-2"></div>
+      </div>
+      <div class="about-hero-content">
+        <p class="showcase-label" style="color: #a9b6c4">About Dularis</p>
+        <h1>One Team. <span>Every Part Of Your Brand.</span></h1>
+        <p class="about-hero-sub">
+          We build websites, run marketing, and design brand materials, all
+          under one roof, so your business speaks with one voice everywhere it
+          shows up.
+        </p>
+      </div>
     </section>
 
     <!-- OUR STORY -->
     <section class="story-section">
       <div class="story-grid">
+        <div class="story-visual">
+          <div class="story-image-frame">
+            <img
+              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&h=1000&fit=crop"
+              alt="Dularis team collaborating"
+            />
+          </div>
+          <div class="story-badge">
+            <span class="story-badge-number">19</span>
+            <span class="story-badge-label">Services, One Team</span>
+          </div>
+        </div>
+
         <div class="story-text">
           <p class="showcase-label">Our Story</p>
           <h2>Why We Exist</h2>
           <p>
-            Dularis started with a clear observation. Serious businesses were paying for a website from one vendor, marketing from another, and brand materials from a third, and none of it lined up. The result was inconsistent branding, wasted budget, and a lot of back and forth that slowed everything down.
+            Businesses were paying for a website from one vendor, marketing from
+            another, and brand materials from a third, and none of it lined up.
+            The result was inconsistent branding, wasted budget, and constant
+            back and forth.
           </p>
           <p>
-            We built Dularis to fix that. One team handles your website, your marketing, and your brand materials, working from the same strategy and the same standard, so everything your business puts out speaks with one voice.
+            We built Dularis to fix that. One team handles your website, your
+            marketing, and your brand materials, working from the same strategy
+            and the same standard, so everything your business puts out speaks
+            with one voice.
           </p>
           <p>
-            We are not a one off project shop. We work as an ongoing partner, managing your online presence, running your campaigns, and reporting on real results through the length of your engagement with us.
+            We are not a one off project shop. We work as an ongoing partner,
+            managing your online presence, running your campaigns, and reporting
+            on real results through the length of your engagement with us.
           </p>
+
+          <div class="story-stats">
+            <div class="story-stat">
+              <span class="stat-number">19</span>
+              <span class="stat-label">Services Offered</span>
+            </div>
+            <div class="story-stat">
+              <span class="stat-number">1</span>
+              <span class="stat-label">Team, No Silos</span>
+            </div>
+            <div class="story-stat">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Transparent Pricing</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -71,69 +142,218 @@
 
       <div class="values-action-grid">
         <div class="value-action-card">
+          <span class="value-icon">01</span>
           <h3>Integrity</h3>
-          <p>Transparent pricing, honest timelines, and no hidden fees. What we quote is what you pay, and what we promise is what we deliver.</p>
+          <p>
+            Transparent pricing, honest timelines, and no hidden fees. What we
+            quote is what you pay, and what we promise is what we deliver.
+          </p>
         </div>
         <div class="value-action-card">
+          <span class="value-icon">02</span>
           <h3>Creativity</h3>
-          <p>Every brand we work with gets a distinct identity built around its actual business, not a template with the logo swapped out.</p>
+          <p>
+            Every brand we work with gets a distinct identity built around its
+            actual business, not a template with the logo swapped out.
+          </p>
         </div>
         <div class="value-action-card">
+          <span class="value-icon">03</span>
           <h3>Excellence</h3>
-          <p>We hold our own delivery to the same standard our clients hold their own operations to. Good enough is not the bar we aim for.</p>
+          <p>
+            We hold our own delivery to the same standard our clients hold their
+            own operations to. Good enough is not the bar we aim for.
+          </p>
         </div>
       </div>
     </section>
 
     <!-- HOW WE WORK -->
     <section class="process-section">
-      <p class="showcase-label">Our Process</p>
+      <p class="showcase-label" style="color: #a9b6c4">Our Process</p>
       <h2>How We Work</h2>
 
-      <div class="process-grid">
+      <div class="process-track">
         <div class="process-step">
           <span class="process-number">01</span>
           <h3>Discover</h3>
-          <p>A brand discovery session and audit to understand your business, your goals, and where the gaps are.</p>
+          <p>
+            A brand discovery session and audit to understand your business,
+            your goals, and where the gaps are.
+          </p>
         </div>
         <div class="process-step">
           <span class="process-number">02</span>
           <h3>Strategize</h3>
-          <p>A clear plan covering your website, marketing, and brand materials, built around measurable outcomes.</p>
+          <p>
+            A clear plan covering your website, marketing, and brand materials,
+            built around measurable outcomes.
+          </p>
         </div>
         <div class="process-step">
           <span class="process-number">03</span>
-          <h3>Build And Launch</h3>
-          <p>Design, development, and content delivered on schedule, with regular updates throughout.</p>
+          <h3>Build &amp; Launch</h3>
+          <p>
+            Design, development, and content delivered on schedule, with regular
+            updates throughout.
+          </p>
         </div>
         <div class="process-step">
           <span class="process-number">04</span>
           <h3>Grow</h3>
-          <p>Ongoing management, reporting, and strategy reviews to keep results improving over time.</p>
+          <p>
+            Ongoing management, reporting, and strategy reviews to keep results
+            improving over time.
+          </p>
         </div>
       </div>
     </section>
 
-    <!-- MEET THE TEAM TEASER -->
+    <!-- TEAM TEASER -->
     <section class="team-teaser-section">
       <p class="showcase-label">Our Team</p>
       <h2>The People Behind Dularis</h2>
       <p class="team-teaser-text">
-        Three co-founders, three different strengths, one team working on your brand.
+        A small team, each bringing a different strength, working together on
+        every brand we touch.
       </p>
       <a href="team.html" class="hero-cta">Meet The Team</a>
     </section>
 
     <!-- CLOSING CTA -->
     <section class="closing-cta-section">
-      <h2>Ready To Build A Brand That Grows With You</h2>
+      <h2>Ready To Build A Brand That Grows With You?</h2>
       <a href="index.html#contact" class="hero-cta">Get In Touch</a>
     </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="img/dularis-logo.png" alt="Dularis" class="footer-logo" />
+          <p class="footer-tagline">
+            Transforming Brands. Empowering Businesses.
+          </p>
+        </div>
+        <div class="footer-links">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Your Story</a></li>
+            <li><a href="team.html">Your Team</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="index.html#packages">Packages</a></li>
+            <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact">
+          <h4>Contact</h4>
+          <ul>
+            <li>info@dularis.com</li>
+            <li>+234 906 848 4193</li>
+            <li>Lagos, Nigeria</li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <h4>Follow Us</h4>
+          <div class="footer-social-icons">
+            <a href="#" aria-label="Instagram" class="social-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <rect
+                  x="2"
+                  y="2"
+                  width="20"
+                  height="20"
+                  rx="5"
+                  stroke="white"
+                  stroke-width="1.8"
+                />
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="4.2"
+                  stroke="white"
+                  stroke-width="1.8"
+                />
+                <circle cx="17.3" cy="6.7" r="1.1" fill="white" />
+              </svg>
+            </a>
+            <a href="#" aria-label="LinkedIn" class="social-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <rect
+                  x="2"
+                  y="2"
+                  width="20"
+                  height="20"
+                  rx="3"
+                  stroke="white"
+                  stroke-width="1.8"
+                />
+                <path
+                  d="M7 10v7M7 7v.01M11 17v-4.5a2 2 0 0 1 4 0V17M11 17v-7"
+                  stroke="white"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </a>
+            <a href="#" aria-label="X" class="social-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M4 4l16 16M20 4L4 20"
+                  stroke="white"
+                  stroke-width="1.8"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; <span id="footerYear"></span> Dularis. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- FLOATING CALL + WHATSAPP -->
+    <div class="floating-contact">
+      <a
+        href="tel:+2349068484193"
+        class="float-btn float-call"
+        aria-label="Call Dularis"
+      >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2a1 1 0 0 1 1.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.46.57 3.58a1 1 0 0 1-.25 1.01l-2.2 2.2z"
+            fill="white"
+          />
+        </svg>
+      </a>
+      <a
+        href="https://wa.me/2349068484193"
+        class="float-btn float-whatsapp"
+        target="_blank"
+        aria-label="Chat on WhatsApp"
+      >
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.28-1.38a9.9 9.9 0 0 0 4.76 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2zm5.8 14.02c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.13.11-1.82-.11-.42-.13-.96-.31-1.65-.6-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.43.75-2.13 1.02-2.42.27-.29.58-.36.78-.36.19 0 .39 0 .56.01.18.01.42-.07.65.5.24.58.82 2 .89 2.15.07.15.12.32.02.51-.1.19-.15.31-.29.48-.15.17-.31.38-.44.51-.15.15-.3.31-.13.6.17.29.75 1.24 1.62 2.01 1.11.99 2.05 1.3 2.34 1.44.29.15.46.13.63-.08.17-.2.72-.84.91-1.13.19-.29.39-.24.65-.14.27.1 1.69.8 1.98.94.29.15.48.22.55.34.07.13.07.75-.17 1.43z"
+            fill="white"
+          />
+        </svg>
+      </a>
+    </div>
 
     <script>
       const navToggle = document.getElementById("navToggle");
       const navLinks = document.getElementById("navLinks");
-      navToggle.addEventListener("click", () => navLinks.classList.toggle("open"));
+      navToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("open");
+        navToggle.classList.toggle("active");
+        document.body.classList.toggle("nav-open");
+      });
 
       const aboutTrigger = document.getElementById("aboutDropdownTrigger");
       const aboutPanel = document.getElementById("aboutDropdownPanel");
@@ -143,11 +363,17 @@
         aboutPanel.classList.toggle("open");
       });
       document.addEventListener("click", (e) => {
-        if (!aboutTrigger.contains(e.target) && !aboutPanel.contains(e.target)) {
+        if (
+          !aboutTrigger.contains(e.target) &&
+          !aboutPanel.contains(e.target)
+        ) {
           aboutTrigger.classList.remove("active");
           aboutPanel.classList.remove("open");
         }
       });
+
+      document.getElementById("footerYear").textContent =
+        new Date().getFullYear();
     </script>
   </body>
 </html>
