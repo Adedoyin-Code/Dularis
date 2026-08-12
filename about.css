@@ -1,48 +1,117 @@
-/* ABOUT HERO */
+/* ============================
+   ABOUT PAGE — CINEMATIC STYLES
+   ============================ */
+
+/* HERO — spinning orbit rings, charcoal-teal background */
 .about-hero {
   position: relative;
-  background: linear-gradient(180deg, #0a2540 0%, #123a63 100%);
-  padding: 100px 20px 90px;
+  background: linear-gradient(180deg, #0d1b2a 0%, #133a3a 55%, #0f2b30 100%);
+  padding: 140px 20px 120px;
   text-align: center;
   overflow: hidden;
+  perspective: 1400px;
 }
 .about-hero-bg {
   position: absolute;
   inset: 0;
   z-index: 0;
   pointer-events: none;
+  overflow: hidden;
 }
-.ah-orb {
+.about-hero-bg::before,
+.about-hero-bg::after {
+  content: "";
   position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 50%;
-  filter: blur(60px);
-  opacity: 0.25;
+  transform: translate(-50%, -50%);
 }
-.ah-orb-1 {
-  width: 380px;
-  height: 380px;
-  top: -120px;
-  left: -100px;
-  background: radial-gradient(circle at 30% 30%, var(--amber), transparent 70%);
-  animation: floatOrbA 18s ease-in-out infinite;
+.about-hero-bg::before {
+  width: 420px;
+  height: 420px;
+  border-top-color: var(--amber);
+  animation: spinRingSlow 18s linear infinite;
 }
-.ah-orb-2 {
-  width: 320px;
-  height: 320px;
-  bottom: -140px;
-  right: -100px;
-  background: radial-gradient(circle at 30% 30%, var(--teal), transparent 70%);
-  animation: floatOrbB 22s ease-in-out infinite;
+.about-hero-bg::after {
+  width: 600px;
+  height: 600px;
+  border-bottom-color: var(--teal);
+  animation: spinRingSlow 26s linear infinite reverse;
 }
+@keyframes spinRingSlow {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.ah-mark {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 130px;
+  height: 130px;
+  z-index: 1;
+  pointer-events: none;
+}
+.ah-mark::before {
+  content: "";
+  position: absolute;
+  top: -300px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--amber);
+  box-shadow: 0 0 12px 3px rgba(255, 122, 0, 0.6);
+  transform-origin: 5px 305px;
+  animation: orbitDot 12s linear infinite;
+}
+@keyframes orbitDot {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.ah-mark-inner {
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+  background: linear-gradient(135deg, var(--amber), var(--teal));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  font-weight: 800;
+  color: #0a2540;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+  /* animation: markSpin 30s linear infinite;  <- removed */
+}
+@keyframes markSpin {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
 .about-hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 .about-hero h1 {
   color: #fff;
-  font-size: 2.4rem;
+  font-size: 2.5rem;
   line-height: 1.25;
-  max-width: 720px;
+  max-width: 740px;
   margin: 10px auto 20px;
   font-weight: 700;
 }
@@ -53,11 +122,80 @@
   color: #c7d0db;
   max-width: 560px;
   margin: 0 auto;
-  font-size: 1.02rem;
+  font-size: 1.03rem;
   line-height: 1.7;
 }
 
-/* OUR STORY */
+.ah-scroll-cue {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.ah-scroll-cue span {
+  display: block;
+  width: 26px;
+  height: 42px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+  position: relative;
+}
+.ah-scroll-cue span::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 8px;
+  background: var(--amber);
+  border-radius: 4px;
+  animation: scrollDot 1.6s ease-in-out infinite;
+}
+@keyframes scrollDot {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, 0);
+  }
+  30% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, 14px);
+  }
+}
+
+/* MANIFESTO */
+.manifesto-section {
+  position: relative;
+  background: var(--bg-light);
+  padding: 90px 20px;
+  text-align: center;
+  overflow: hidden;
+}
+.manifesto-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 122, 0, 0.05),
+    transparent 60%
+  );
+}
+.manifesto-text {
+  position: relative;
+  max-width: 780px;
+  margin: 0 auto;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: var(--navy);
+  font-weight: 600;
+}
+.manifesto-text span {
+  color: var(--amber);
+}
+
+/* STORY */
 .story-section {
   padding: 90px 20px;
   background: var(--bg-white);
@@ -72,6 +210,8 @@
 }
 .story-visual {
   position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.15s ease-out;
 }
 .story-image-frame {
   border-radius: 20px;
@@ -120,7 +260,6 @@
   margin-top: 4px;
   text-align: center;
 }
-
 .story-text .showcase-label {
   text-align: left;
   margin-bottom: 8px;
@@ -145,6 +284,55 @@
 .story-stat {
   display: flex;
   flex-direction: column;
+}
+.stat-number {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--navy);
+  line-height: 1;
+}
+.stat-label {
+  font-size: 0.78rem;
+  color: var(--gray);
+  margin-top: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* BY THE NUMBERS */
+.numbers-section {
+  padding: 90px 20px;
+  background: var(--bg-white);
+  text-align: center;
+}
+.numbers-section h2 {
+  color: var(--navy);
+  font-size: 1.8rem;
+  margin: 8px auto 46px;
+}
+.numbers-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.number-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.number-value {
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--amber);
+  line-height: 1;
+}
+.number-label {
+  color: var(--gray);
+  font-size: 0.85rem;
+  margin-top: 10px;
+  max-width: 180px;
 }
 
 /* VALUES IN ACTION */
@@ -174,12 +362,12 @@
   text-align: left;
   position: relative;
   overflow: hidden;
+  transform-style: preserve-3d;
   transition:
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
 .value-action-card:hover {
-  transform: translateY(-6px);
   box-shadow: 0 18px 36px rgba(10, 37, 64, 0.12);
 }
 .value-icon {
@@ -201,7 +389,7 @@
   line-height: 1.7;
 }
 
-/* HOW WE WORK */
+/* PROCESS TIMELINE */
 .process-section {
   padding: 90px 20px;
   background: var(--navy);
@@ -212,37 +400,109 @@
   font-size: 1.8rem;
   margin: 8px auto 50px;
 }
-.process-track {
-  max-width: 1100px;
+.process-timeline {
+  max-width: 900px;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 24px;
+  position: relative;
+  padding-left: 30px;
+  text-align: left;
+}
+.timeline-line {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--amber), var(--teal));
 }
 .process-step {
+  position: relative;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
-  padding: 28px 24px;
+  padding: 26px 24px;
   text-align: left;
-  position: relative;
+  margin-bottom: 24px;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+.process-step.reveal-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.process-step::before {
+  content: "";
+  position: absolute;
+  left: -36px;
+  top: 30px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--amber);
+  box-shadow: 0 0 0 4px rgba(255, 122, 0, 0.2);
 }
 .process-number {
   display: block;
   color: var(--amber);
   font-weight: 800;
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+  font-size: 1.4rem;
+  margin-bottom: 8px;
 }
 .process-step h3 {
   color: #fff;
   font-size: 1.1rem;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 .process-step p {
   color: #c7d0db;
   font-size: 0.88rem;
-  line-height: 1.65;
+  line-height: 1.6;
+}
+
+/* WHAT WE STAND FOR */
+.standfor-section {
+  padding: 90px 20px;
+  background: var(--bg-light);
+  text-align: center;
+}
+.standfor-section h2 {
+  color: var(--navy);
+  font-size: 1.8rem;
+  margin: 8px auto 46px;
+}
+.standfor-grid {
+  max-width: 1050px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+}
+.standfor-card {
+  background: #fff;
+  border: 1px solid #e4e9ef;
+  border-radius: 14px;
+  padding: 26px 22px;
+  text-align: left;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.standfor-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 28px rgba(10, 37, 64, 0.1);
+}
+.standfor-card h3 {
+  color: var(--amber);
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+}
+.standfor-card p {
+  color: var(--gray);
+  font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 /* TEAM TEASER */
@@ -265,22 +525,40 @@
 
 /* CLOSING CTA */
 .closing-cta-section {
-  padding: 90px 20px;
-  background: var(--bg-white);
+  position: relative;
+  padding: 100px 20px;
+  background: var(--navy);
   text-align: center;
+  overflow: hidden;
+}
+.closing-cta-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 30% 30%,
+      rgba(255, 122, 0, 0.12),
+      transparent 50%
+    ),
+    radial-gradient(circle at 75% 70%, rgba(0, 184, 169, 0.12), transparent 50%);
 }
 .closing-cta-section h2 {
-  color: var(--navy);
-  font-size: 1.7rem;
-  margin-bottom: 26px;
+  position: relative;
+  color: #fff;
+  font-size: 1.8rem;
+  margin-bottom: 28px;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
+.closing-cta-section .hero-cta {
+  position: relative;
+}
 
+/* RESPONSIVENESS */
 @media (min-width: 700px) {
-  .process-track {
-    grid-template-columns: 1fr 1fr;
+  .numbers-grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 @media (min-width: 900px) {
@@ -290,7 +568,21 @@
   .values-action-grid {
     grid-template-columns: 1fr 1fr 1fr;
   }
-  .process-track {
-    grid-template-columns: repeat(4, 1fr);
+  .standfor-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .about-hero-bg::before {
+    width: 260px;
+    height: 260px;
+  }
+  .about-hero-bg::after {
+    width: 380px;
+    height: 380px;
+  }
+  .ah-mark::before {
+    top: -180px;
+    transform-origin: 5px 185px;
   }
 }

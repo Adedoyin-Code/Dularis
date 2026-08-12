@@ -10,7 +10,7 @@
     />
     <title>About Us | Dularis</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="about.css" />
   </head>
   <body>
     <!-- NAVBAR -->
@@ -18,11 +18,9 @@
       <div class="logo">
         <img src="img/dularis-logo.png" alt="Dularis" class="logo-img" />
       </div>
-
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
-
       <div class="mobile-nav-overlay" id="navLinks">
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
@@ -59,16 +57,17 @@
           >Get In Touch</a
         >
       </div>
-
       <a href="index.html#contact" class="nav-cta">Get In Touch</a>
     </nav>
 
-    <!-- ABOUT HERO -->
-    <section class="about-hero">
-      <div class="about-hero-bg" aria-hidden="true">
-        <div class="ah-orb ah-orb-1"></div>
-        <div class="ah-orb ah-orb-2"></div>
+    <!-- CINEMATIC HERO -->
+    <section class="about-hero" id="aboutHero">
+      <div class="about-hero-bg" aria-hidden="true"></div>
+
+      <div class="ah-mark" id="ahMark">
+        <!-- <div class="ah-mark-inner">D</div> -->
       </div>
+
       <div class="about-hero-content">
         <p class="showcase-label" style="color: #a9b6c4">About Dularis</p>
         <h1>One Team. <span>Every Part Of Your Brand.</span></h1>
@@ -77,13 +76,26 @@
           under one roof, so your business speaks with one voice everywhere it
           shows up.
         </p>
+        <div class="ah-scroll-cue">
+          <span></span>
+        </div>
       </div>
+    </section>
+
+    <!-- MANIFESTO / QUOTE -->
+    <section class="manifesto-section">
+      <div class="manifesto-bg" aria-hidden="true"></div>
+      <p class="manifesto-text">
+        We do not believe a brand should sound different depending on who built
+        the last part of it.
+        <span>One team. One standard. Every touchpoint.</span>
+      </p>
     </section>
 
     <!-- OUR STORY -->
     <section class="story-section">
       <div class="story-grid">
-        <div class="story-visual">
+        <div class="story-visual" data-tilt>
           <div class="story-image-frame">
             <img
               src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&h=1000&fit=crop"
@@ -119,18 +131,43 @@
 
           <div class="story-stats">
             <div class="story-stat">
-              <span class="stat-number">19</span>
-              <span class="stat-label">Services Offered</span>
+              <span class="stat-number">19</span
+              ><span class="stat-label">Services Offered</span>
             </div>
             <div class="story-stat">
-              <span class="stat-number">1</span>
-              <span class="stat-label">Team, No Silos</span>
+              <span class="stat-number">1</span
+              ><span class="stat-label">Team, No Silos</span>
             </div>
             <div class="story-stat">
-              <span class="stat-number">100%</span>
-              <span class="stat-label">Transparent Pricing</span>
+              <span class="stat-number">100%</span
+              ><span class="stat-label">Transparent Pricing</span>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BY THE NUMBERS -->
+    <section class="numbers-section">
+      <p class="showcase-label">By The Numbers</p>
+      <h2>What One Team Actually Covers</h2>
+
+      <div class="numbers-grid">
+        <div class="number-card">
+          <span class="number-value" data-count="19">0</span>
+          <span class="number-label">Services under one roof</span>
+        </div>
+        <div class="number-card">
+          <span class="number-value" data-count="3">0</span>
+          <span class="number-label">Core pillars: web, marketing, brand</span>
+        </div>
+        <div class="number-card">
+          <span class="number-value" data-count="6">0</span>
+          <span class="number-label">Minimum months per engagement</span>
+        </div>
+        <div class="number-card">
+          <span class="number-value" data-count="100">0</span>
+          <span class="number-label">% transparent, quoted pricing</span>
         </div>
       </div>
     </section>
@@ -141,7 +178,7 @@
       <h2>What Integrity, Creativity, And Excellence Actually Mean Here</h2>
 
       <div class="values-action-grid">
-        <div class="value-action-card">
+        <div class="value-action-card" data-tilt>
           <span class="value-icon">01</span>
           <h3>Integrity</h3>
           <p>
@@ -149,7 +186,7 @@
             quote is what you pay, and what we promise is what we deliver.
           </p>
         </div>
-        <div class="value-action-card">
+        <div class="value-action-card" data-tilt>
           <span class="value-icon">02</span>
           <h3>Creativity</h3>
           <p>
@@ -157,7 +194,7 @@
             actual business, not a template with the logo swapped out.
           </p>
         </div>
-        <div class="value-action-card">
+        <div class="value-action-card" data-tilt>
           <span class="value-icon">03</span>
           <h3>Excellence</h3>
           <p>
@@ -168,13 +205,15 @@
       </div>
     </section>
 
-    <!-- HOW WE WORK -->
+    <!-- HOW WE WORK (scroll timeline) -->
     <section class="process-section">
       <p class="showcase-label" style="color: #a9b6c4">Our Process</p>
       <h2>How We Work</h2>
 
-      <div class="process-track">
-        <div class="process-step">
+      <div class="process-timeline">
+        <div class="timeline-line"></div>
+
+        <div class="process-step reveal">
           <span class="process-number">01</span>
           <h3>Discover</h3>
           <p>
@@ -182,7 +221,7 @@
             your goals, and where the gaps are.
           </p>
         </div>
-        <div class="process-step">
+        <div class="process-step reveal">
           <span class="process-number">02</span>
           <h3>Strategize</h3>
           <p>
@@ -190,7 +229,7 @@
             built around measurable outcomes.
           </p>
         </div>
-        <div class="process-step">
+        <div class="process-step reveal">
           <span class="process-number">03</span>
           <h3>Build &amp; Launch</h3>
           <p>
@@ -198,12 +237,48 @@
             updates throughout.
           </p>
         </div>
-        <div class="process-step">
+        <div class="process-step reveal">
           <span class="process-number">04</span>
           <h3>Grow</h3>
           <p>
             Ongoing management, reporting, and strategy reviews to keep results
             improving over time.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT WE STAND FOR -->
+    <section class="standfor-section">
+      <p class="showcase-label">Beyond The Work</p>
+      <h2>What We Stand For</h2>
+      <div class="standfor-grid">
+        <div class="standfor-card">
+          <h3>Consistency Over Chaos</h3>
+          <p>
+            Every deliverable ties back to the same strategy, so your brand
+            never feels like it was built by five different people.
+          </p>
+        </div>
+        <div class="standfor-card">
+          <h3>Partnership, Not Projects</h3>
+          <p>
+            We stay involved after launch. Growth is ongoing, and so is our work
+            with you.
+          </p>
+        </div>
+        <div class="standfor-card">
+          <h3>Results You Can See</h3>
+          <p>
+            Monthly reporting, clear metrics, no vague "brand awareness" claims
+            without numbers behind them.
+          </p>
+        </div>
+        <div class="standfor-card">
+          <h3>Built To Scale With You</h3>
+          <p>
+            Start with Essential, move to Growth, move to Enterprise. The
+            relationship grows as you do.
           </p>
         </div>
       </div>
@@ -222,6 +297,7 @@
 
     <!-- CLOSING CTA -->
     <section class="closing-cta-section">
+      <div class="closing-cta-bg" aria-hidden="true"></div>
       <h2>Ready To Build A Brand That Grows With You?</h2>
       <a href="index.html#contact" class="hero-cta">Get In Touch</a>
     </section>
@@ -374,6 +450,62 @@
 
       document.getElementById("footerYear").textContent =
         new Date().getFullYear();
+
+      // 3D tilt on story image + value cards
+      document.querySelectorAll("[data-tilt]").forEach((card) => {
+        card.addEventListener("mousemove", (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+          const rotateX = ((y - rect.height / 2) / (rect.height / 2)) * -6;
+          const rotateY = ((x - rect.width / 2) / (rect.width / 2)) * 6;
+          card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`;
+        });
+        card.addEventListener("mouseleave", () => {
+          card.style.transform = "rotateX(0) rotateY(0) scale(1)";
+        });
+      });
+
+      // Scroll reveal for timeline + numbers count-up
+      const revealEls = document.querySelectorAll(".reveal");
+      const numberEls = document.querySelectorAll(".number-value");
+
+      const revealObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("reveal-visible");
+              revealObserver.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.2 },
+      );
+      revealEls.forEach((el) => revealObserver.observe(el));
+
+      const countObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const el = entry.target;
+              const target = parseInt(el.dataset.count, 10);
+              let current = 0;
+              const step = Math.max(1, Math.ceil(target / 40));
+              const timer = setInterval(() => {
+                current += step;
+                if (current >= target) {
+                  current = target;
+                  clearInterval(timer);
+                }
+                el.textContent = current;
+              }, 30);
+              countObserver.unobserve(el);
+            }
+          });
+        },
+        { threshold: 0.5 },
+      );
+      numberEls.forEach((el) => countObserver.observe(el));
     </script>
   </body>
 </html>
