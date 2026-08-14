@@ -8,9 +8,9 @@
       href="img/74b4be6e-0963-435f-b5a4-6c0ee50a71f8.png"
       type="image/x-icon"
     />
-    <title>Our Team | Dularis</title>
+    <title>Blog | Dularis</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="team.css" />
+    <link rel="stylesheet" href="blog.css" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -25,28 +25,11 @@
             "telephone": "+234-906-848-4193"
           },
           {
-            "@type": "AboutPage",
-            "url": "https://dularis.com/team.html",
-            "name": "Our Team | Dularis",
-            "about": { "@id": "https://dularis.com/#organization" }
-          },
-          {
-            "@type": "Person",
-            "name": "Olamilekan Ajibesin",
-            "jobTitle": "Brand Communication Strategist",
-            "worksFor": { "@id": "https://dularis.com/#organization" }
-          },
-          {
-            "@type": "Person",
-            "name": "Biodun Shittu",
-            "jobTitle": "Brand Development Strategist",
-            "worksFor": { "@id": "https://dularis.com/#organization" }
-          },
-          {
-            "@type": "Person",
-            "name": "Adedoyin David Taiwo",
-            "jobTitle": "Technical Director",
-            "worksFor": { "@id": "https://dularis.com/#organization" }
+            "@type": "Blog",
+            "url": "https://dularis.com/blog.html",
+            "name": "Dularis Blog",
+            "publisher": { "@id": "https://dularis.com/#organization" },
+            "description": "Insights on brand, marketing, and growth from the Dularis team."
           }
         ]
       }
@@ -56,7 +39,9 @@
     <!-- NAVBAR -->
     <nav class="navbar">
       <div class="logo">
-        <img src="img/dularis.png" alt="Dularis" class="logo-img" />
+        <a href="index.html">
+          <img src="img/dularis.png" alt="Dularis" class="logo-img"
+        /></a>
       </div>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -100,46 +85,84 @@
       <a href="index.html#contact" class="nav-cta">Get In Touch</a>
     </nav>
 
-    <!-- TEAM HERO -->
-    <section class="team-hero">
-      <p class="showcase-label" style="color: #a9b6c4">Our Team</p>
-      <h1>The People Behind <span>Dularis</span></h1>
-      <p class="team-hero-sub">
-        Three people, three different strengths, one team working on every brand
-        we touch.
+    <!-- BLOG HERO -->
+    <section class="blog-hero">
+      <p class="showcase-label" style="color: #a9b6c4">Our Blog</p>
+      <h1>Insights On Brand, <span>Marketing, And Growth</span></h1>
+      <p class="blog-hero-sub">
+        Thoughts, guides, and updates from the Dularis team on building brands
+        that last.
       </p>
     </section>
 
-    <!-- TEAM GRID -->
-    <section class="team-grid-section">
-      <div class="team-grid">
-        <div class="team-member-card reveal-up" data-tilt>
-          <div class="team-photo-frame">
-            <img src="img/team-olamilekan.jpg" alt="Olamilekan Ajibesin" />
-            <div class="team-photo-glow"></div>
-          </div>
-          <h3>Olamilekan Ajibesin</h3>
-          <p class="team-role">Brand Communication Strategist</p>
-        </div>
+    <!-- BLOG GRID -->
+    <section class="blog-grid-section">
+      <div class="blog-grid">
+        <article class="blog-card">
+          <a
+            href="blog-post-1.html"
+            style="text-decoration: none; display: block; color: inherit"
+          >
+            <div class="blog-card-image">
+              <img src="img/card-5.jpg" alt="Digital marketing trends 2026" />
+              <span class="blog-tag">Marketing</span>
+            </div>
+            <div class="blog-card-body">
+              <span class="blog-date">2026</span>
+              <h3>The New Ways of Digital Marketing in 2026</h3>
+              <p>
+                Being online isn't enough anymore. Here's how businesses can
+                stay visible, credible, and competitive as search, AI, and
+                customer behavior all shift.
+              </p>
+            </div>
+          </a>
+        </article>
 
-        <div class="team-member-card reveal-up" data-tilt>
-          <div class="team-photo-frame">
-            <img src="img/team-biodun.jpg" alt="Biodun Shittu" />
-            <div class="team-photo-glow"></div>
+        <article class="blog-card">
+          <div class="blog-card-image">
+            <img
+              src="img/Meta-Ads-Management.jpg"
+              alt="Website redesign signs"
+            />
+            <span class="blog-tag">Web Design</span>
           </div>
-          <h3>Biodun Shittu</h3>
-          <p class="team-role">Brand Development Strategist</p>
-        </div>
+          <div class="blog-card-body">
+            <span class="blog-date">Coming Soon</span>
+            <h3>5 Signs Your Website Needs A Redesign</h3>
+            <p>
+              The practical signals that tell you your site is costing you
+              customers, not winning them.
+            </p>
+          </div>
+        </article>
 
-        <div class="team-member-card reveal-up" data-tilt>
-          <div class="team-photo-frame">
-            <img src="img/team-adedoyin.jpg" alt="Adedoyin David Taiwo" />
-            <div class="team-photo-glow"></div>
+        <article class="blog-card">
+          <div class="blog-card-image">
+            <img src="img/service-12.jpg" alt="Meta ads strategy" />
+            <span class="blog-tag">Marketing</span>
           </div>
-          <h3>Adedoyin David Taiwo</h3>
-          <p class="team-role">Technical Director</p>
-        </div>
+          <div class="blog-card-body">
+            <span class="blog-date">Coming Soon</span>
+            <h3>Getting Meta Ads Right: What Most Businesses Miss</h3>
+            <p>
+              The difference between running ads and running ads that actually
+              convert into leads.
+            </p>
+          </div>
+        </article>
       </div>
+
+      <p class="blog-more-note">
+        More articles coming soon. We publish new insights regularly.
+      </p>
+    </section>
+
+    <!-- CLOSING CTA -->
+    <section class="closing-cta-section">
+      <div class="closing-cta-bg" aria-hidden="true"></div>
+      <h2>Ready To Build A Brand That Grows With You?</h2>
+      <a href="index.html#contact" class="hero-cta">Get In Touch</a>
     </section>
 
     <!-- FOOTER -->
@@ -299,18 +322,9 @@
 
       document.getElementById("footerYear").textContent =
         new Date().getFullYear();
-      document.querySelectorAll("[data-tilt]").forEach((card) => {
-        card.addEventListener("mousemove", (e) => {
-          const rect = card.getBoundingClientRect();
-          const x = e.clientX - rect.left;
-          const y = e.clientY - rect.top;
-          const rotateX = ((y - rect.height / 2) / (rect.height / 2)) * -5;
-          const rotateY = ((x - rect.width / 2) / (rect.width / 2)) * 5;
-          card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
-        });
-        card.addEventListener("mouseleave", () => {
-          card.style.transform = "rotateX(0) rotateY(0) translateY(0)";
-        });
+
+      document.querySelectorAll(".blog-card").forEach((card, i) => {
+        card.style.animationDelay = `${i * 0.12}s`;
       });
     </script>
   </body>

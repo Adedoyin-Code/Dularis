@@ -14,12 +14,144 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://dularis.com/#organization",
+            "name": "Dularis",
+            "url": "https://dularis.com",
+            "logo": "https://dularis.com/img/dularis-logo.png",
+            "description": "A growth and brand agency handling website development, digital marketing, and brand materials as one connected system.",
+            "email": "info@dularis.com",
+            "telephone": "+234-906-848-4193",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Lagos",
+              "addressCountry": "NG"
+            },
+            "sameAs": []
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://dularis.com/#website",
+            "url": "https://dularis.com",
+            "name": "Dularis",
+            "publisher": { "@id": "https://dularis.com/#organization" }
+          },
+          {
+            "@type": "Service",
+            "name": "Website Development",
+            "provider": { "@id": "https://dularis.com/#organization" },
+            "description": "Modern, responsive websites that convert visitors into customers."
+          },
+          {
+            "@type": "Service",
+            "name": "Social Media Management",
+            "provider": { "@id": "https://dularis.com/#organization" },
+            "description": "Strategic management that builds engagement and grows your brand."
+          },
+          {
+            "@type": "Service",
+            "name": "Digital Advertising",
+            "provider": { "@id": "https://dularis.com/#organization" },
+            "description": "Targeted ads that increase visibility, leads, and sales."
+          },
+          {
+            "@type": "Service",
+            "name": "Brand Strategy & Positioning",
+            "provider": { "@id": "https://dularis.com/#organization" },
+            "description": "Define your brand identity, position, and messaging."
+          },
+          {
+            "@type": "Service",
+            "name": "SEO",
+            "provider": { "@id": "https://dularis.com/#organization" },
+            "description": "Improve rankings, drive organic traffic, and grow your business."
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Dularis Packages",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "name": "Dularis Essential Package",
+                "priceCurrency": "NGN",
+                "price": "1474000",
+                "description": "Full ongoing brand management, 6 months, includes website development, SEO, and social media management."
+              },
+              {
+                "@type": "Offer",
+                "name": "Dularis Growth Package",
+                "priceCurrency": "NGN",
+                "price": "3244000",
+                "description": "Everything in Essential plus advanced SEO, business consulting, and expanded ad campaigns, 6 months."
+              },
+              {
+                "@type": "Offer",
+                "name": "Dularis Enterprise Package",
+                "description": "Everything in Growth plus premium corporate website development and a dedicated account manager. Custom quotation."
+              }
+            ]
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What does Dularis do?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Dularis is a growth and brand agency. We handle website development, digital marketing, and brand materials as one connected system, working as an ongoing partner rather than a one off project shop."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How much does a website cost with Dularis?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Standalone website development starts at 160,000 Naira. A full website is also included as part of our Essential Package, which starts at 1,474,000 Naira for 6 months."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What packages does Dularis offer?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Dularis offers three packages: Essential, Growth, and Enterprise. Essential starts at 1,474,000 Naira for 6 months, Growth starts at 3,244,000 Naira for 6 months, and Enterprise is custom quoted."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How many services does Dularis offer?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Dularis offers 19 services covering website development, digital marketing, and brand materials, all delivered by one team."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Where is Dularis based?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Dularis is based in Lagos, Nigeria, and serves businesses seeking a consistent, professional brand presence."
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <!-- NAVBAR -->
     <nav class="navbar">
       <div class="logo">
-        <img src="img/dularis.png" alt="Dularis" class="logo-img" />
+        <a href="index.html">
+          <img src="img/dularis.png" alt="Dularis" class="logo-img"
+        /></a>
       </div>
 
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
@@ -28,7 +160,7 @@
 
       <div class="mobile-nav-overlay" id="navLinks">
         <ul class="nav-links">
-          <li><a href="#home">Home</a></li>
+          <li><a href="#hero-hero">Home</a></li>
           <li class="nav-dropdown">
             <button class="nav-dropdown-trigger" id="aboutDropdownTrigger">
               About
@@ -66,7 +198,7 @@
     </nav>
 
     <!-- HERO -->
-    <section class="hero">
+    <section class="hero" id="hero-hero">
       <h1>Transforming Brands. <span>Empowering Businesses.</span></h1>
       <p>
         We help businesses build a consistent, professional presence website,
@@ -1168,19 +1300,19 @@
     <footer class="site-footer">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="img" alt="Dularis" class="footer-logo" />
+          <img src="img/dularis.png" alt="Dularis" class="footer-logo" />
           <p class="footer-tagline">
-            Transforming Brands. Empowering Businesses.
+            <!-- Transforming Brands. Empowering Businesses. -->
           </p>
         </div>
 
         <div class="footer-links">
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="#home">Home</a></li>
+            <li><a href="#hero-hero">Home</a></li>
             <li><a href="about.html">Your Story</a></li>
             <li><a href="team.html">Your Team</a></li>
-            <li><a href="#services">Services</a></li>
+            <li><a href="#services-detail">Services</a></li>
             <li><a href="#packages">Packages</a></li>
             <li><a href="blog.html">Blog</a></li>
           </ul>
@@ -1195,60 +1327,65 @@
           </ul>
         </div>
 
-        <div class="footer-social">
-          <h4>Follow Us</h4>
-          <div class="footer-social-icons">
-            <a href="#" aria-label="Instagram" class="social-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <rect
-                  x="2"
-                  y="2"
-                  width="20"
-                  height="20"
-                  rx="5"
-                  stroke="white"
-                  stroke-width="1.8"
-                />
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="4.2"
-                  stroke="white"
-                  stroke-width="1.8"
-                />
-                <circle cx="17.3" cy="6.7" r="1.1" fill="white" />
-              </svg>
-            </a>
-            <a href="#" aria-label="LinkedIn" class="social-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <rect
-                  x="2"
-                  y="2"
-                  width="20"
-                  height="20"
-                  rx="3"
-                  stroke="white"
-                  stroke-width="1.8"
-                />
-                <path
-                  d="M7 10v7M7 7v.01M11 17v-4.5a2 2 0 0 1 4 0V17M11 17v-7"
-                  stroke="white"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                />
-              </svg>
-            </a>
-            <a href="#" aria-label="X" class="social-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M4 4l16 16M20 4L4 20"
-                  stroke="white"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                />
-              </svg>
-            </a>
-          </div>
+        <div class="footer-social-icons">
+          <a href="#" aria-label="Facebook" class="social-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M15 8.5h2V5.5h-2c-2.2 0-4 1.8-4 4v2H9v3h2v6h3v-6h2.5l.5-3H14v-2c0-.5.5-1 1-1z"
+                fill="white"
+              />
+            </svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="social-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <rect
+                x="2"
+                y="2"
+                width="20"
+                height="20"
+                rx="5"
+                stroke="white"
+                stroke-width="1.8"
+              />
+              <circle
+                cx="12"
+                cy="12"
+                r="4.2"
+                stroke="white"
+                stroke-width="1.8"
+              />
+              <circle cx="17.3" cy="6.7" r="1.1" fill="white" />
+            </svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" class="social-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <rect
+                x="2"
+                y="2"
+                width="20"
+                height="20"
+                rx="3"
+                stroke="white"
+                stroke-width="1.8"
+              />
+              <path
+                d="M7 10v7M7 7v.01M11 17v-4.5a2 2 0 0 1 4 0V17M11 17v-7"
+                stroke="white"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+            </svg>
+          </a>
+          <a href="#" aria-label="X" class="social-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M4 4l16 16M20 4L4 20"
+                stroke="white"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+            </svg>
+          </a>
         </div>
       </div>
 

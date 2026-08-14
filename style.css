@@ -39,7 +39,7 @@ body {
   align-items: center;
 }
 .logo-img {
-  height: 60px;
+  height: 86px;
   width: auto;
   display: block;
 }
@@ -1661,13 +1661,18 @@ body {
 
 .footer-brand {
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: 14px;
 }
 .footer-logo {
-  height: 34px;
+  height: 86px;
   width: auto;
+  display: block;
+  display: flex;
+  
 }
+ 
 .footer-tagline {
   color: #a9b6c4;
   font-size: 0.88rem;
@@ -1883,6 +1888,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-left: 48%;
   }
   .nav-dropdown-panel.open {
     max-height: 200px;
@@ -1958,5 +1964,10 @@ body.nav-open {
 @media (min-width: 700px) {
   .footer-grid {
     grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  }
+}
+@media (max-width: 420px) {
+  .logo-img {
+    height: 38px;
   }
 }

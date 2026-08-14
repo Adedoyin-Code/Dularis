@@ -1,6 +1,38 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://dularis.com/#organization",
+            "name": "Dularis",
+            "url": "https://dularis.com",
+            "logo": "https://dularis.com/img/dularis-logo.png",
+            "description": "A growth and brand agency handling website development, digital marketing, and brand materials as one connected system.",
+            "email": "info@dularis.com",
+            "telephone": "+234-906-848-4193",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Lagos",
+              "addressCountry": "NG"
+            },
+            "foundingLocation": "Lagos, Nigeria",
+            "slogan": "Transforming Brands. Empowering Businesses."
+          },
+          {
+            "@type": "AboutPage",
+            "url": "https://dularis.com/about.html",
+            "name": "About Dularis",
+            "isPartOf": { "@id": "https://dularis.com/#website" },
+            "about": { "@id": "https://dularis.com/#organization" },
+            "description": "Dularis is a growth and brand agency built as one team handling website development, marketing, and brand materials together, so client brands speak with one voice everywhere they show up."
+          }
+        ]
+      }
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
@@ -306,22 +338,24 @@
     <footer class="site-footer">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="img/dularis-logo.png" alt="Dularis" class="footer-logo" />
+          <img src="img/dularis.png" alt="Dularis" class="footer-logo" />
           <p class="footer-tagline">
-            Transforming Brands. Empowering Businesses.
+            <!-- Transforming Brands. Empowering Businesses. -->
           </p>
         </div>
+
         <div class="footer-links">
           <h4>Quick Links</h4>
-          <ul>
-            <li><a href="index.html">Home</a></li>
+         <ul>
+            <li><a href="#hero-hero">Home</a></li>
             <li><a href="about.html">Your Story</a></li>
             <li><a href="team.html">Your Team</a></li>
-            <li><a href="index.html#services">Services</a></li>
-            <li><a href="index.html#packages">Packages</a></li>
+            <li><a href="#services-detail">Services</a></li>
+            <li><a href="#packages">Packages</a></li>
             <li><a href="blog.html">Blog</a></li>
           </ul>
         </div>
+
         <div class="footer-contact">
           <h4>Contact</h4>
           <ul>
@@ -330,62 +364,69 @@
             <li>Lagos, Nigeria</li>
           </ul>
         </div>
-        <div class="footer-social">
-          <h4>Follow Us</h4>
-          <div class="footer-social-icons">
-            <a href="#" aria-label="Instagram" class="social-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <rect
-                  x="2"
-                  y="2"
-                  width="20"
-                  height="20"
-                  rx="5"
-                  stroke="white"
-                  stroke-width="1.8"
-                />
-                <circle
-                  cx="12"
-                  cy="12"
-                  r="4.2"
-                  stroke="white"
-                  stroke-width="1.8"
-                />
-                <circle cx="17.3" cy="6.7" r="1.1" fill="white" />
-              </svg>
-            </a>
-            <a href="#" aria-label="LinkedIn" class="social-icon">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <rect
-                  x="2"
-                  y="2"
-                  width="20"
-                  height="20"
-                  rx="3"
-                  stroke="white"
-                  stroke-width="1.8"
-                />
-                <path
-                  d="M7 10v7M7 7v.01M11 17v-4.5a2 2 0 0 1 4 0V17M11 17v-7"
-                  stroke="white"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                />
-              </svg>
-            </a>
-            <a href="#" aria-label="X" class="social-icon">
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                <path
-                  d="M4 4l16 16M20 4L4 20"
-                  stroke="white"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                />
-              </svg>
-            </a>
-          </div>
+
+        <div class="footer-social-icons">
+          <a href="#" aria-label="Facebook" class="social-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M15 8.5h2V5.5h-2c-2.2 0-4 1.8-4 4v2H9v3h2v6h3v-6h2.5l.5-3H14v-2c0-.5.5-1 1-1z"
+                fill="white"
+              />
+            </svg>
+          </a>
+          <a href="#" aria-label="Instagram" class="social-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <rect
+                x="2"
+                y="2"
+                width="20"
+                height="20"
+                rx="5"
+                stroke="white"
+                stroke-width="1.8"
+              />
+              <circle
+                cx="12"
+                cy="12"
+                r="4.2"
+                stroke="white"
+                stroke-width="1.8"
+              />
+              <circle cx="17.3" cy="6.7" r="1.1" fill="white" />
+            </svg>
+          </a>
+          <a href="#" aria-label="LinkedIn" class="social-icon">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <rect
+                x="2"
+                y="2"
+                width="20"
+                height="20"
+                rx="3"
+                stroke="white"
+                stroke-width="1.8"
+              />
+              <path
+                d="M7 10v7M7 7v.01M11 17v-4.5a2 2 0 0 1 4 0V17M11 17v-7"
+                stroke="white"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+            </svg>
+          </a>
+          <a href="#" aria-label="X" class="social-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+              <path
+                d="M4 4l16 16M20 4L4 20"
+                stroke="white"
+                stroke-width="1.8"
+                stroke-linecap="round"
+              />
+            </svg>
+          </a>
         </div>
       </div>
+
       <div class="footer-bottom">
         <p>
           &copy; <span id="footerYear"></span> Dularis. All rights reserved.
