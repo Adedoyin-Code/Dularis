@@ -238,6 +238,39 @@ body {
     transform 0.2s ease,
     box-shadow 0.2s ease;
 }
+.hero-eyebrow {
+  display: block;
+  color: var(--teal);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-cta-secondary {
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  color: #fff;
+  box-shadow: none;
+}
+.hero-cta-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #fff;
+  transform: translateY(-2px);
+  box-shadow: none;
+}
 .hero-cta:hover {
   background: var(--amber-hover);
   transform: translateY(-2px);
