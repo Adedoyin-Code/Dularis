@@ -800,6 +800,17 @@ body {
   font-size: 0.88rem;
   line-height: 1.55;
 }
+.services-teaser-grid {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 22px;
+}
+.services-teaser-cta {
+  text-align: center;
+  margin-top: 44px;
+}
 
 /* PACKAGES */
 .packages-section {
@@ -1828,6 +1839,17 @@ body {
     max-width: 1600px;
     padding-left: 60px;
     padding-right: 60px;
+  }
+}
+
+@media (min-width: 640px) {
+  .services-teaser-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (min-width: 1000px) {
+  .services-teaser-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
