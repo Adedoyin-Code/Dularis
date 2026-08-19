@@ -1423,46 +1423,61 @@ body {
 }
 
 /* PACKAGE PRICE (multi-duration) */
-.price-option {
+.package-features-short li,
+.package-features-full li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: var(--charcoal);
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+.package-features-short li::before,
+.package-features-full li::before {
+  content: "✓";
+  flex-shrink: 0;
+  color: var(--teal);
+  font-weight: 700;
+}
+.package-features {
+  list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 12px;
+  margin-bottom: 4px;
 }
-.price-option .amount {
-  color: var(--navy);
-  font-size: 1.7rem;
-  font-weight: 800;
-  line-height: 1.15;
+.package-features-full {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed #e4e9ef;
+  flex-grow: 1;
 }
-.price-option .period {
-  color: var(--gray);
-  font-size: 0.82rem;
+.package-featured .package-features-full {
+  border-top-color: rgba(255, 255, 255, 0.15);
 }
-.price-option .deduction {
-  color: var(--teal);
-  font-size: 0.78rem;
-  font-weight: 600;
-  margin-top: 4px;
-}
-.package-featured .price-option .amount {
-  color: #fff;
-}
-.package-featured .price-option .period {
-  color: #c7d0db;
-}
-.package-featured .price-option .deduction {
-  color: var(--amber);
-}
-.package-includes {
-  color: var(--gray);
-  font-size: 0.85rem;
-  font-weight: 600;
-  margin-bottom: 14px;
-}
-.package-featured .package-includes {
-  color: #c7d0db;
+.package-featured .package-features-short li,
+.package-featured .package-features-full li {
+  color: #e4e9ef;
 }
 
+.package-toggle {
+  background: none;
+  border: none;
+  color: var(--amber);
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  padding: 6px 0 20px;
+  text-align: left;
+  font-family: inherit;
+}
+.package-toggle:hover {
+  text-decoration: underline;
+}
+
+.package-name {
+  margin-top: 4px;
+}
 /* ADD-ONS */
 .addons-wrap {
   max-width: 1100px;

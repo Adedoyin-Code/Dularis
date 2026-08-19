@@ -671,6 +671,7 @@
 
     <!-- PACKAGES -->
 
+    <!-- PACKAGES -->
     <section class="packages-section" id="packages">
       <div class="packages-bg-shapes" aria-hidden="true">
         <div class="pbg-mesh"></div>
@@ -1357,24 +1358,19 @@
         document.body.classList.toggle("nav-open");
       });
 
-      // Package duration toggle (6 months / 12 months)
-      const durationToggle = document.getElementById("durationToggle");
-      if (durationToggle) {
-        const durationBtns = durationToggle.querySelectorAll(".duration-btn");
-        durationBtns.forEach((btn) => {
-          btn.addEventListener("click", () => {
-            durationBtns.forEach((b) => b.classList.remove("active"));
-            btn.classList.add("active");
-            const duration = btn.dataset.duration;
-            document.querySelectorAll(".price-6").forEach((el) => {
-              el.hidden = duration !== "6";
-            });
-            document.querySelectorAll(".price-12").forEach((el) => {
-              el.hidden = duration !== "12";
-            });
-          });
+      // Package "See Full Details" toggle
+      document.querySelectorAll(".package-toggle").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const card = btn.closest(".package-card");
+          const shortList = card.querySelector(".package-features-short");
+          const fullList = card.querySelector(".package-features-full");
+          const isExpanded = !fullList.hidden;
+
+          fullList.hidden = isExpanded;
+          shortList.hidden = !isExpanded;
+          btn.textContent = isExpanded ? "See Full Details" : "Show Less";
         });
-      }
+      });
 
       // About dropdown toggle (navbar)
       const aboutTrigger = document.getElementById("aboutDropdownTrigger");
@@ -1393,6 +1389,7 @@
           aboutPanel.classList.remove("open");
         }
       });
+
       // FAQ accordion toggle
       document.querySelectorAll(".faq-question").forEach((btn) => {
         btn.addEventListener("click", () => {

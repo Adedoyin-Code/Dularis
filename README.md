@@ -1,6 +1,6 @@
 # Dularis
 
-Dularis is a growth and brand agency. We handle website design, digital marketing, and corporate brand materials as one connected system, not three separate projects.
+We help businesses build stronger brands, establish a professional digital presence, and grow through strategy, technology, and creative solutions.
 
 ## About
 
