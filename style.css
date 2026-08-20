@@ -1159,7 +1159,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   gap: 24px;
-  align-items: stretch;
+  align-items: start; /* was: stretch */
 }
 .package-card {
   background: var(--bg-light);
@@ -1477,6 +1477,55 @@ body {
 
 .package-name {
   margin-top: 4px;
+}
+/* animated toggle wraps */
+.short-features-wrap,
+.full-features-wrap {
+  overflow: hidden;
+  max-height: 1000px;
+  opacity: 1;
+  transition:
+    max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 0.35s ease,
+    margin 0.35s ease;
+}
+
+.full-features-wrap {
+  max-height: 0;
+  opacity: 0;
+}
+
+.full-features-wrap .package-features-full {
+  padding-top: 12px;
+  margin-top: 12px;
+  border-top: 1px dashed #e4e9ef;
+}
+.package-featured .full-features-wrap .package-features-full {
+  border-top-color: rgba(255, 255, 255, 0.15);
+}
+
+.package-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition:
+    transform 0.15s ease,
+    color 0.2s ease;
+}
+.package-toggle:hover {
+  transform: translateX(2px);
+  color: var(--amber-hover);
+}
+.toggle-icon {
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.package-card.expanded .toggle-icon {
+  transform: rotate(180deg);
+}
+
+/* keep CTA pinned to the bottom regardless of expand state */
+.package-cta {
+  margin-top: auto;
 }
 /* ADD-ONS */
 .addons-wrap {
